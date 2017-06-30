@@ -13,12 +13,9 @@ How to use this crossplatform structured exception handling (SEH).
 For example, this code is working fine:
 
 ```c++
-try
-{
+try {
     *(int*) 0 = 0;
-}
-catch (std::exception& e)
-{
+} catch (std::exception& e) {
     std::cerr << "Exception catched : " << e.what() << std::endl;
 }
 ```
